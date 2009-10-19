@@ -119,13 +119,12 @@ class MoneybirdApiTest extends PHPUnit_Framework_Testcase
 
         $invoice = $mbapi->getInvoice(7577);
         $sendInfo = new MoneybirdInvoiceSendInformation(
-            $invoice,
             'email',
             'sjors@desjors.nl',
             'Et voila, de factuur'
         );
 
-        $mbapi->sendInvoice($sendInfo);
+        $mbapi->sendInvoice($invoice, $sendInfo);
 	}*/
     
     /**
